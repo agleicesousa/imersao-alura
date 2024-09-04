@@ -19,13 +19,70 @@ body {
 }
 
 header {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 0;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+    height: 80px;
+}
+
+header .logo-container img {
+    width: 100px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 20px; 
+    font-size: 16px; 
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 8px;
+}
+
+header nav a.active {
+    color: #e50914;
+    border-bottom: 2px solid #e50914;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+header .auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+header .auth-buttons .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+header .auth-buttons .btn-white {
+    background-color: #fff;
+    color: #000;
+}
+
+header .auth-buttons .btn-red {
+    background-color: #e50914;
+    color: #fff;
 }
 
 nav {
@@ -39,7 +96,6 @@ nav {
 
 nav img {
     width: 100px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 nav button {
