@@ -57,7 +57,7 @@ Bem-vindo ao CinemaFlix, um projeto desenvolvido durante a Imersão DEV da Alura
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd cinema-flix
+   cd imersao-alura
    ```
 
 3. Abra o arquivo `index.html` em seu navegador para visualizar a página inicial.
