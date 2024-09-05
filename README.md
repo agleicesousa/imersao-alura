@@ -82,5 +82,4 @@ Um agradecimento especial à equipe da Alura e ao Gemini pela excelente orienta�
 
 ## 🔗 Links Úteis
 
-- [Imersão DEV da Alura](https://www.alura.com.br/imersao-dev)
-- [Documentação da Alura](https://www.alura.com.br/artigos)
+- [Imersão DEV da Alura](https://www.alura.com.br/imersao-dev-google-gemini))
