@@ -74,7 +74,7 @@ Aqui estão algumas capturas de tela do projeto:
 Se você tiver alguma dúvida ou feedback, sinta-se à vontade para me contatar:
 
 - Email: agleicesousa98@gmail.com
-- LinkedIn: [Seu Perfil LinkedIn](https://www.linkedin.com/in/agleice-sousa)
+- LinkedIn: [Agleice Sousa](https://www.linkedin.com/in/agleice-sousa)
 
 ## 🎓 Agradecimentos
 
