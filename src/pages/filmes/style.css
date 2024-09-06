@@ -1,4 +1,5 @@
-/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -26,8 +27,24 @@ header {
     height: 80px;
 }
 
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: filter 0.3s;
+    cursor: pointer;
+
+}
+
 header .logo-container img {
     width: 100px;
+}
+
+header .logo-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #e0e0e0;
 }
 
 header nav {

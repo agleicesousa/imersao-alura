@@ -33,8 +33,24 @@ header {
     height: 80px;
 }
 
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: filter 0.3s;
+    cursor: pointer;
+
+}
+
 header .logo-container img {
     width: 100px;
+}
+
+header .logo-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #e0e0e0;
 }
 
 header nav {
