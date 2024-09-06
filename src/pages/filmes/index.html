@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>CinemaFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="../../../index.html"><img src="../../../assets/images/logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="#" class="active">Filmes</a>
+            <a href="#">Séries</a>
+            <a href="#">Animes</a>
+            <a href="#">Documentários</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn btn-white">Entrar</button>
+            <button class="btn btn-red">Cadastrar</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Bem-vindo ao Streaming</h1>
+            <div class="hero-buttons">
+                <input type="text" id="search-input" placeholder="Buscar filmes...">
+                <button id="search-button" class="btn btn-red">Buscar</button>
+                <select id="genre-filter" class="btn">
+                    <option value="">Filtrar por gênero</option>
+                    <!-- As opções serão adicionadas dinamicamente -->
+                </select>
+            </div>
+        </div>
+        <div class="movie-grid" id="movie-grid">
+            <!-- Os cards dos filmes serão inseridos aqui pelo JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../../../assets/images/logo.png" alt="Logo">
+            </div>
+            <div class="footer-nav">
+                <h3>Links Rápidos</h3>
+                <a href="#">Início</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Termos de Serviço</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Email: contato@streaming.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <div class="newsletter">
+                    <input type="email" placeholder="Inscreva-se para a newsletter">
+                    <button class="btn-red">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Streaming. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+<script src="../../../dados.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
