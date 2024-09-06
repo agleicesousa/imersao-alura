@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon"> <!-- Define o ícone do site (favicon) -->
     <link rel="stylesheet" href="style.css">
     <title>CinemaFlix</title>
 </head>
 
 <body>
 
-    <header>
+    <header> <!-- Cabeçalho do site -->
         <div class="logo-container">
             <img src="assets/images/logo.png" alt="Logo">
             <h1>CinemaFlix</h1>
@@ -29,8 +29,8 @@
         </div>
     </header>
 
-    <main class="main">
-        <div class="hero">
+    <main class="main">  <!-- Conteúdo principal -->
+        <div class="hero">  <!-- Texto principal e call-to-action -->
             <h1>Maratonas Sem Fim, Emoções Inigualáveis!</h1>
             <p>Entre no universo do entretenimento sem limites e viva aventuras incríveis.</p>
             <p>Inscreva-se agora e seja o primeiro a receber novidades e surpresas exclusivas no seu e-mail!</p>
@@ -42,11 +42,13 @@
     </main>
 
     <footer>
+        <!-- O JavaScript insere o ano atual automaticamente -->
         <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa</a>. Todos
             os direitos reservados.</p>
     </footer>
 
-    <script>
+    <!-- Script para inserir o ano atual no rodapé -->
+    <script> 
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('year').textContent = new Date().getFullYear();
         });

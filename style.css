@@ -1,5 +1,7 @@
+/* Importa as fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
 
+/* Remove margens e espaçamentos padrão e define fonte e comportamento de rolagem suave */
 * {
     padding: 0;
     margin: 0;
@@ -8,6 +10,7 @@
     scroll-behavior: smooth;
 }
 
+/* Estilo do corpo da página */
 body {
     background-color: #121212;
     color: white;
@@ -18,6 +21,7 @@ body {
     min-height: 100vh;
 }
 
+/* Estilo do cabeçalho fixo na parte superior da página */
 header {
     position: fixed;
     top: 0;
@@ -33,19 +37,21 @@ header {
     height: 80px;
 }
 
+/* Container do logo e nome, com transição e comportamento ao passar o cursor */
 header .logo-container {
     display: flex;
     align-items: center;
     gap: 5px;
     transition: filter 0.3s;
     cursor: pointer;
-
 }
 
+/* Estilo da imagem do logo */
 header .logo-container img {
     width: 100px;
 }
 
+/* Estilo do título no logo */
 header .logo-container h1 {
     font-size: 24px;
     font-weight: 600;
@@ -53,36 +59,42 @@ header .logo-container h1 {
     color: #e0e0e0;
 }
 
+/* Navegação centralizada no cabeçalho */
 header nav {
     flex-grow: 1;
     display: flex;
     justify-content: center;
 }
 
+/* Links de navegação com animação ao passar o mouse */
 header nav a {
     color: #e0e0e0;
     text-decoration: none;
-    margin: 0 20px; 
-    font-size: 16px; 
+    margin: 0 20px;
+    font-size: 16px;
     font-weight: 500;
     transition: color 0.3s, border-bottom 0.3s;
     padding-bottom: 8px;
 }
 
+/* Estilo para link ativo */
 header nav a.active {
     color: #e50914;
     border-bottom: 2px solid #e50914;
 }
 
+/* Alteração da cor ao passar o mouse sobre o link */
 header nav a:hover {
     color: #fff;
 }
 
+/* Botões de autenticação (login/cadastro) */
 header .auth-buttons {
     display: flex;
     gap: 15px;
 }
 
+/* Estilo dos botões de login/cadastro */
 header .auth-buttons .btn {
     font-size: 14px;
     padding: 10px 20px;
@@ -91,50 +103,19 @@ header .auth-buttons .btn {
     cursor: pointer;
 }
 
+/* Botão branco */
 header .auth-buttons .btn-white {
     background-color: #fff;
     color: #000;
 }
 
+/* Botão vermelho */
 header .auth-buttons .btn-red {
     background-color: #e50914;
     color: #fff;
 }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-}
-
-nav img {
-    width: 100px;
-}
-
-nav button {
-    padding: 6px 14px;
-    border-radius: 30px;
-    border: 2px solid transparent;
-    background-color: transparent;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-}
-
-nav button:hover {
-    background-color: white;
-    color: black;
-    border-color: white;
-}
-
+/* Estilo principal da seção central */
 .main {
     flex: 1;
     display: flex;
@@ -147,10 +128,12 @@ nav button:hover {
     background-repeat: no-repeat;
 }
 
+/* Centralização da hero section */
 .hero {
     text-align: center;
 }
 
+/* Estilo do título principal na hero */
 .hero h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -161,6 +144,7 @@ nav button:hover {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
+/* Estilo dos parágrafos na hero */
 .hero p {
     font-size: 18px;
     margin-bottom: 15px;
@@ -168,6 +152,7 @@ nav button:hover {
     line-height: 1.4;
 }
 
+/* Estilo dos botões na hero */
 .hero-buttons {
     display: flex;
     align-items: center;
@@ -177,6 +162,7 @@ nav button:hover {
     margin-top: 20px;
 }
 
+/* Estilo básico dos botões */
 .btn {
     padding: 10px 25px;
     font-weight: 500;
@@ -192,21 +178,24 @@ nav button:hover {
     justify-content: center;
 }
 
+/* Estilo do botão vermelho */
 .btn-red {
     background-color: #e50914;
     color: white;
     padding: 12px 30px;
-    font-size: 16px; 
+    font-size: 16px;
     border-radius: 30px;
     font-weight: 600;
     border: none;
 }
 
+/* Animação ao passar o mouse no botão vermelho */
 .btn-red:hover {
     background-color: #b20710;
     transform: scale(1.05);
 }
 
+/* Estilo dos inputs na seção principal */
 .main input {
     padding: 10px 18px;
     color: white;
@@ -219,22 +208,26 @@ nav button:hover {
     outline: none;
 }
 
+/* Placeholder dos inputs */
 .main input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Alteração da borda ao focar no input */
 .main input:focus {
     border-color: white;
 }
 
+/* Estilo da grade de filmes */
 .movie-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; 
+    gap: 30px;
     margin-top: 20px;
 }
 
+/* Estilo dos cartões de filmes */
 .movie-card {
     position: relative;
     width: 220px;
@@ -245,6 +238,7 @@ nav button:hover {
     cursor: pointer;
 }
 
+/* Estilo das imagens dos filmes */
 .movie-card img {
     width: 100%;
     height: 320px;
@@ -253,30 +247,36 @@ nav button:hover {
     transition: opacity 0.3s;
 }
 
+/* Animação ao passar o mouse sobre a imagem */
 .movie-card:hover img {
     opacity: 0.7;
 }
 
+/* Informações do filme */
 .movie-card .info {
     text-align: center;
     padding: 10px;
 }
 
+/* Título do filme */
 .movie-card h3 {
     font-size: 18px;
     margin: 10px 0;
 }
 
+/* Avaliação do filme */
 .movie-card p {
     font-size: 16px;
 }
 
+/* Mensagem de resultados não encontrados */
 #no-results-message {
     font-size: 18px;
     font-weight: 600;
     margin-top: 20px;
 }
 
+/* Estilo do rodapé */
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: #e0e0e0;
@@ -287,10 +287,12 @@ footer {
     margin-top: auto;
 }
 
+/* Estilo dos parágrafos no rodapé */
 footer p {
     margin: 0;
 }
 
+/* Estilo dos links no rodapé */
 footer a {
     color: #e0e0e0;
     text-decoration: none;

@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
 
+/* Reset básico para remover margens e espaçamentos padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais do corpo */
 body {
     font-family: 'Roboto', sans-serif;
     color: #e0e0e0;
     background-color: #000;
 }
 
+/* Estilos do cabeçalho fixo */
 header {
     position: fixed;
     top: 0;
@@ -27,6 +30,7 @@ header {
     height: 80px;
 }
 
+/* Container para o logo no cabeçalho */
 header .logo-container {
     display: flex;
     align-items: center;
@@ -35,15 +39,18 @@ header .logo-container {
     cursor: pointer;
 }
 
+/* Estilo do logo */
 header .logo-container img {
     width: 100px;
 }
 
+/* Estilos do link de logo */
 header .logo-container a {
     color: #e0e0e0;
     text-decoration: none;
 }
 
+/* Título no cabeçalho */
 header .logo-container h1 {
     font-size: 24px;
     font-weight: 600;
@@ -51,36 +58,42 @@ header .logo-container h1 {
     color: #e0e0e0;
 }
 
+/* Estilos para a barra de navegação */
 header nav {
     flex-grow: 1;
     display: flex;
     justify-content: center;
 }
 
+/* Links de navegação */
 header nav a {
     color: #e0e0e0;
     text-decoration: none;
-    margin: 0 20px; 
-    font-size: 16px; 
+    margin: 0 20px;
+    font-size: 16px;
     font-weight: 500;
     transition: color 0.3s, border-bottom 0.3s;
     padding-bottom: 8px;
 }
 
+/* Link ativo com borda vermelha */
 header nav a.active {
     color: #e50914;
     border-bottom: 2px solid #e50914;
 }
 
+/* Efeito hover nos links de navegação */
 header nav a:hover {
     color: #fff;
 }
 
+/* Botões de autenticação no cabeçalho */
 header .auth-buttons {
     display: flex;
     gap: 15px;
 }
 
+/* Estilos gerais para botões */
 header .auth-buttons .btn {
     font-size: 14px;
     padding: 10px 20px;
@@ -89,32 +102,38 @@ header .auth-buttons .btn {
     cursor: pointer;
 }
 
+/* Botão branco */
 header .auth-buttons .btn-white {
     background-color: #fff;
     color: #000;
 }
 
+/* Botão vermelho */
 header .auth-buttons .btn-red {
     background-color: #e50914;
     color: #fff;
 }
 
+/* Estilos gerais do main */
 main {
-    padding: 100px 30px 30px; 
+    padding: 100px 30px 30px;
     background-color: #111;
 }
 
+/* Estilo do herói (seção principal) */
 .hero {
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* Título principal do herói */
 .hero h1 {
     font-size: 32px;
     color: #fff;
     margin-bottom: 20px;
 }
 
+/* Container de botões e inputs */
 .hero-buttons {
     display: flex;
     align-items: center;
@@ -123,6 +142,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* Estilo do campo de input de busca */
 #search-input {
     padding: 12px 18px;
     border-radius: 30px;
@@ -132,11 +152,13 @@ main {
     width: 300px;
 }
 
+/* Estilo do botão de busca */
 #search-button {
     padding: 12px 18px;
     border-radius: 30px;
 }
 
+/* Estilo do seletor de gêneros */
 #genre-filter {
     padding: 12px 18px;
     font-size: 16px;
@@ -148,18 +170,21 @@ main {
     cursor: pointer;
 }
 
+/* Estilo das opções no filtro de gêneros */
 #genre-filter option {
     background-color: #333;
     color: white;
 }
 
+/* Estilo da grade de filmes */
 .movie-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; 
+    gap: 30px;
 }
 
+/* Estilos dos cartões de filme */
 .movie-card {
     position: relative;
     width: 220px;
@@ -170,6 +195,7 @@ main {
     cursor: pointer;
 }
 
+/* Estilo das imagens dos filmes */
 .movie-card img {
     width: 100%;
     height: 320px;
@@ -178,28 +204,34 @@ main {
     transition: opacity 0.3s;
 }
 
+/* Efeito hover nas imagens */
 .movie-card:hover img {
     opacity: 0.7;
 }
 
+/* Estilo das informações dos filmes */
 .movie-card .info {
     text-align: center;
     padding: 10px;
 }
 
+/* Título do filme */
 .movie-card h3 {
     font-size: 18px;
     margin: 10px 0;
 }
 
+/* Informações adicionais do filme */
 .movie-card p {
     font-size: 16px;
 }
 
+/* Estilo do botão de "assistir" que aparece no hover */
 .movie-card:hover .watch-button {
     display: block;
 }
 
+/* Botão de assistir dentro dos cartões */
 .watch-button {
     position: absolute;
     bottom: 15px;
@@ -213,6 +245,7 @@ main {
     font-size: 16px;
 }
 
+/* Estilos do rodapé */
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: #e0e0e0;
@@ -221,6 +254,7 @@ footer {
     text-align: center;
 }
 
+/* Estilos do conteúdo do rodapé */
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -231,29 +265,34 @@ footer {
     margin: 0 auto;
 }
 
+/* Logo no rodapé */
 .footer-logo {
     flex: 1;
     min-width: 220px;
     text-align: center;
 }
 
+/* Estilo da imagem de logo no rodapé */
 .footer-logo img {
     width: 150px;
     margin-bottom: 20px;
 }
 
+/* Seções de navegação e contato no rodapé */
 .footer-nav, .footer-contact, .footer-social {
     flex: 1;
     min-width: 220px;
     text-align: left;
 }
 
+/* Estilos dos títulos das seções no rodapé */
 .footer-nav h3, .footer-contact h3, .footer-social h3 {
     font-size: 20px;
     margin-bottom: 15px;
     color: #e50914;
 }
 
+/* Links de navegação e contato no rodapé */
 .footer-nav a, .footer-contact a {
     display: block;
     color: #e0e0e0;
@@ -263,18 +302,22 @@ footer {
     transition: color 0.3s;
 }
 
+/* Efeito hover nos links do rodapé */
 .footer-nav a:hover, .footer-contact a:hover {
     color: #fff;
 }
 
+/* Seção de redes sociais no rodapé */
 .footer-social {
     text-align: center;
 }
 
+/* Estilo para o título da seção de redes sociais no rodapé */
 .footer-social h3 {
     margin-bottom: 15px;
 }
 
+/* Estilo para os links de redes sociais */
 .footer-social a {
     color: #e0e0e0;
     font-size: 28px;
@@ -282,21 +325,24 @@ footer {
     transition: color 0.3s;
 }
 
+/* Efeito hover nos links de redes sociais */
 .footer-social a:hover {
     color: #e50914;
 }
 
+/* Estilo da newsletter */
 .newsletter {
     flex: 1;
     min-width: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; 
+    gap: 15px;
     max-width: 350px;
     margin: 0 auto;
 }
 
+/* Input de newsletter */
 .newsletter input {
     padding: 12px;
     border-radius: 30px;
@@ -307,19 +353,22 @@ footer {
     max-width: 350px;
 }
 
+/* Botão da newsletter */
 .newsletter button {
     padding: 12px;
     border-radius: 30px;
     width: 100%;
-    max-width: 350px; 
+    max-width: 350px;
 }
 
+/* Texto inferior do rodapé */
 .footer-bottom {
     margin-top: 30px;
     font-size: 16px;
     color: #888;
 }
 
+/* Links no texto inferior do rodapé */
 .footer-bottom a {
     color: #888;
     text-decoration: none;

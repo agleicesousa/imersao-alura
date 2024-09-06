@@ -46,6 +46,10 @@ Bem-vindo ao CinemaFlix, um projeto desenvolvido durante a Imersão DEV da Alura
 │   └── # Dados dos filmes armazenados em um array JavaScript.
 ```
 
+## 📑 Comentários no Código
+
+Os arquivos de estilo e script incluem comentários que explicam as principais seções e funcionalidades do código, facilitando a compreensão e manutenção do projeto.
+
 ## 💻 Como Rodar o Projeto
 
 1. Clone o repositório:

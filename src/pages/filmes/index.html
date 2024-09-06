@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon"> <!-- Define o ícone do site (favicon) -->
     <link rel="stylesheet" href="style.css">
     <title>CinemaFlix</title>
 </head>
 
 <body>
-    <header>
+    <header> <!-- Cabeçalho do site -->
         <div class="logo-container">
             <a href="../../../index.html"><img src="../../../assets/images/logo.png" alt="Logo"></a>
             <h1><a href="../../../index.html">CinemaFlix</a></h1>
@@ -29,7 +31,7 @@
         </div>
     </header>
 
-    <main>
+    <main> <!-- Conteúdo principal do site -->
         <div class="hero">
             <div class="hero-buttons">
                 <input type="text" id="search-input" placeholder="Buscar filmes...">
@@ -45,7 +47,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer>  <!-- Rodapé do site -->
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="../../../assets/images/logo.png" alt="Logo">
@@ -75,18 +77,21 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa.</a> Todos os direitos reservados.</p>
+            <!-- O JavaScript insere o ano atual automaticamente -->
+            <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa.</a>
+                Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script>
+    <!-- Script para inserir o ano atual no rodapé -->
+    <script> 
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('year').textContent = new Date().getFullYear();
         });
     </script>
 
-<script src="../../../dados.js"></script>
-<script src="script.js"></script>
+    <script src="../../../dados.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
