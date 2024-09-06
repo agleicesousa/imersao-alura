@@ -7,7 +7,6 @@ Bem-vindo ao CinemaFlix, um projeto desenvolvido durante a Imersão DEV da Alura
 - **Interface de Usuário Atraente**: Design intuitivo e responsivo com uma página inicial cativante.
 - **Sistema de Pesquisa e Filtro**: Permite a busca e filtragem de conteúdo por gênero.
 - **Exibição Dinâmica de Conteúdo**: Visualização de filmes e séries em uma grade interativa.
-- **Página de Detalhes do Filme**: Redireciona para uma página de detalhes ao clicar em um filme.
 
 ## 🛠 Tecnologias Utilizadas
 

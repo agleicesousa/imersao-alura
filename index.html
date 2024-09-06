@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
             <img src="assets/images/logo.png" alt="Logo">
         </div>
         <nav>
-            <a href="./src/pages/films/index.html">Filmes</a>
+            <a href="./src/pages/filmes/index.html">Filmes</a>
             <a href="#">Séries</a>
             <a href="#">Animes</a>
             <a href="#">Documentários</a>
@@ -31,20 +33,25 @@
 
     <main class="main">
         <div class="hero">
-            <h1>Maratonas sem fim, Emoções sem limites.</h1>
-            <p>Descubra um mundo de entretenimento sem limites.</p>
-            <p>Assista a séries e filmes exclusivos, a qualquer hora, em qualquer lugar.</p>
+            <h1>Maratonas Sem Fim, Emoções Inigualáveis!</h1>
+            <p>Entre no universo do entretenimento sem limites e viva aventuras incríveis.</p>
+            <p>Inscreva-se agora e seja o primeiro a receber novidades e surpresas exclusivas no seu e-mail!</p>            
             <div class="hero-buttons">
-                <input type="text" placeholder="Filmes, séries, animes...">
-                <button class="btn btn-red">Pesquisar &gt;</button>
+                <input type="text" id="search-input" placeholder="E-mail">
+                <button class="btn btn-red" id="search-button">Vamos lá &gt;</button>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Agleice Sousa. Todos os direitos reservados.</p>
+        <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa</a>. Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 
 </html>

@@ -298,3 +298,9 @@ footer {
     font-size: 16px;
     color: #888;
 }
+
+.footer-bottom a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
