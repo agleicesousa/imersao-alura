@@ -15,7 +15,6 @@ Bem-vindo ao CinemaFlix, um projeto desenvolvido durante a Imersão DEV da Alura
 - **CSS**: Estilização e layout.
 - **JavaScript**: Funcionalidade dinâmica e interação com o usuário.
 - **Font Awesome**: Ícones sociais e outros ícones gráficos.
-- **Fetch API**: Carregamento de dados JSON.
 
 ## 📁 Estrutura do Projeto
 
@@ -27,38 +26,40 @@ Bem-vindo ao CinemaFlix, um projeto desenvolvido durante a Imersão DEV da Alura
 │       └── # Imagens utilizadas no projeto.
 │
 ├── src
-│   ├── json
-│   │   └── films.json
-│   │       └── # Dados dos filmes em formato JSON.
-│   │
 │   └── pages
-│       ├── index.html
-│       │   └── # Página de streaming com funcionalidades de busca e filtro.
-│       │
-│       ├── script.js
-│       │   └── # Script para funcionalidades dinâmicas da página de streaming.
-│       │
-│       └── style.css
-│           └── # Arquivo de estilos para a página com a lista Filmes.
+│       └── filmes
+│          ├── index.html
+│          │      └── # Página de streaming com funcionalidades de busca e filtro.
+│          │
+│          ├── script.js
+│          │      └── # Script para funcionalidades dinâmicas da página de streaming.
+│          │
+│          └── style.css
+│                 └── # Arquivo de estilos para a página com a lista Filmes.
 │
 ├── index.html
 │   └── # Página inicial da plataforma CinemaFlix.
 │
-└── stile.css
-    └── # Arquivo de estilos para a página inicial da plataforma.
+├── style.css
+│   └── # Arquivo de estilos para a página inicial da plataforma.
+│
+├── dados.js
+│   └── # Dados dos filmes armazenados em um array JavaScript.
 ```
 
 ## 💻 Como Rodar o Projeto
 
 1. Clone o repositório:
-   ```bash
+   
+```bash
    git clone https://github.com/agleicesousa/imersao-alura.git
-   ```
+```
 
 2. Navegue até o diretório do projeto:
-   ```bash
+   
+```bash
    cd imersao-alura
-   ```
+```
 
 3. Abra o arquivo `index.html` em seu navegador para visualizar a página inicial.
 
@@ -82,4 +83,4 @@ Um agradecimento especial à equipe da Alura e ao Gemini pela excelente orienta�
 
 ## 🔗 Links Úteis
 
-- [Imersão DEV da Alura](https://www.alura.com.br/imersao-dev-google-gemini))
+- [Imersão DEV da Alura](https://www.alura.com.br/imersao-dev-google-gemini)
