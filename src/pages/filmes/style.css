@@ -33,11 +33,15 @@ header .logo-container {
     gap: 5px;
     transition: filter 0.3s;
     cursor: pointer;
-
 }
 
 header .logo-container img {
     width: 100px;
+}
+
+header .logo-container a {
+    color: #e0e0e0;
+    text-decoration: none;
 }
 
 header .logo-container h1 {
