@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon"> <!-- Define o ícone do site (favicon) -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"> <!-- Define o ícone do site (favicon) -->
     <link rel="stylesheet" href="style.css">
     <title>CinemaFlix</title>
 </head>
@@ -19,13 +19,13 @@
         </div>
         <nav>
             <a href="./src/pages/filmes/index.html">Filmes</a>
-            <a href="#">Séries</a>
-            <a href="#">Animes</a>
-            <a href="#">Documentários</a>
+            <a href="#" class="alertButton" data-message="Em breve as melhores séries 🎥">Séries</a>
+            <a href="#" class="alertButton" data-message="Animes incríveis estarão disponíveis 🎥">Animes</a>
+            <a href="#" class="alertButton" data-message="Documentários fascinantes em breve 🎥">Documentários</a>
         </nav>
         <div class="auth-buttons">
-            <button class="btn btn-white">Entrar</button>
-            <button class="btn btn-red">Cadastrar</button>
+            <button class="btn btn-white" id="loginButton" data-message="Ainda não estamos ativos 😞">Entrar</button>
+            <button class="btn btn-red" id="signupButton" data-message="Em breve você poderá se cadastrar 😞">Cadastrar</button>
         </div>
     </header>
 
@@ -36,23 +36,17 @@
             <p>Inscreva-se agora e seja o primeiro a receber novidades e surpresas exclusivas no seu e-mail!</p>
             <div class="hero-buttons">
                 <input type="text" id="search-input" placeholder="E-mail">
-                <button class="btn btn-red" id="search-button">Vamos lá &gt;</button>
+                <button class="btn btn-red" id="newsletterButton" data-message="Ainda não estamos recebendo e-mails 📥">Vamos lá &gt;</button>
             </div>
         </div>
     </main>
 
     <footer>
         <!-- O JavaScript insere o ano atual automaticamente -->
-        <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa</a>. Todos
-            os direitos reservados.</p>
+        <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa</a>. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script para inserir o ano atual no rodapé -->
-    <script> 
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

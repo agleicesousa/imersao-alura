@@ -4,34 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon"> <!-- Define o ícone do site (favicon) -->
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>CinemaFlix</title>
 </head>
 
 <body>
-    <header> <!-- Cabeçalho do site -->
+    <header>
+        <!-- Cabeçalho do site -->
         <div class="logo-container">
             <a href="../../../index.html"><img src="../../../assets/images/logo.png" alt="Logo"></a>
             <h1><a href="../../../index.html">CinemaFlix</a></h1>
         </div>
         <nav>
-            <a href="#" class="active">Filmes</a>
-            <a href="#">Séries</a>
-            <a href="#">Animes</a>
-            <a href="#">Documentários</a>
+            <a href="#" class="active" data-message="Você já está na página de Filmes">Filmes</a>
+            <a href="#" class="alertButton" data-message="Em breve as melhores séries 🎥">Séries</a>
+            <a href="#" class="alertButton" data-message="Animes incríveis estarão disponíveis 🎥">Animes</a>
+            <a href="#" class="alertButton" data-message="Documentários fascinantes em breve 🎥">Documentários</a>
         </nav>
         <div class="auth-buttons">
-            <button class="btn btn-white">Entrar</button>
-            <button class="btn btn-red">Cadastrar</button>
+            <button class="btn btn-white" id="loginButton" data-message="Ainda não estamos ativos 😞">Entrar</button>
+            <button class="btn btn-red" id="signupButton" data-message="Em breve você poderá se cadastrar 😞">Cadastrar</button>
         </div>
     </header>
 
-    <main> <!-- Conteúdo principal do site -->
+    <main>
+        <!-- Conteúdo principal do site -->
         <div class="hero">
             <div class="hero-buttons">
                 <input type="text" id="search-input" placeholder="Buscar filmes...">
@@ -41,24 +41,27 @@
                     <!-- As opções serão adicionadas dinamicamente -->
                 </select>
             </div>
+            <div id="no-results-message" class="no-results-message"></div> <!-- Novo elemento para a mensagem de erro -->
         </div>
         <div class="movie-grid" id="movie-grid">
             <!-- Os cards dos filmes serão inseridos aqui pelo JavaScript -->
         </div>
-    </main>
+    </main>    
 
-    <footer>  <!-- Rodapé do site -->
+    <footer>
+        <!-- Rodapé do site -->
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="../../../assets/images/logo.png" alt="Logo">
+                <h2>CinemaFlix</h2>
             </div>
             <div class="footer-nav">
                 <h3>Links Rápidos</h3>
-                <a href="#">Início</a>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Ajuda</a>
-                <a href="#">Termos de Serviço</a>
-                <a href="#">Política de Privacidade</a>
+                <a href="../../../index.html">Início</a>
+                <a href="#" class="alertButton" data-message="Mais sobre nós em breve 🎥">Sobre Nós</a>
+                <a href="#" class="alertButton" data-message="Precisa de ajuda? Em breve mais informações 🎥">Ajuda</a>
+                <a href="#" class="alertButton" data-message="Termos de serviço em breve disponíveis 🎥">Termos de Serviço</a>
+                <a href="#" class="alertButton" data-message="Política de Privacidade estará disponível 🎥">Política de Privacidade</a>
             </div>
             <div class="footer-contact">
                 <h3>Contato</h3>
@@ -67,28 +70,19 @@
             </div>
             <div class="footer-social">
                 <h3>Siga-nos</h3>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/agleice-sousa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/glehsousa_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.github.com/agleicesousa" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <div class="newsletter">
                     <input type="email" placeholder="Inscreva-se para a newsletter">
-                    <button class="btn-red">Inscrever-se</button>
+                    <button class="btn-red" id="newsletterButton" data-message="Ainda não estamos recebendo e-mails 📥">Inscrever-se</button>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <!-- O JavaScript insere o ano atual automaticamente -->
-            <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa.</a>
-                Todos os direitos reservados.</p>
+            <p>&copy; <span id="year"></span> <a href="https://www.linkedin.com/in/agleice-sousa">Agleice Sousa</a>. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <!-- Script para inserir o ano atual no rodapé -->
-    <script> 
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
 
     <script src="../../../dados.js"></script>
     <script src="script.js"></script>

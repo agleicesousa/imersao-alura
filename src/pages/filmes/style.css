@@ -245,12 +245,24 @@ main {
     font-size: 16px;
 }
 
+/* Estilo para a mensagem de nenhum resultado encontrado */
+.no-results-message {
+    color: #e50914;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    display: none; /* Inicialmente escondido */
+}
+
 /* Estilos do rodapé */
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: #e0e0e0;
-    padding: 50px 30px;
-    border-top: 1px solid #333;
+    align-items: center;
+    /* display: flex; */
+    justify-content: center;
+    /* border-top: 1px solid #333; */
+    margin-top: 10px;
     text-align: center;
 }
 

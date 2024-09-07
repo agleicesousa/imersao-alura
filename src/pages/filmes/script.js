@@ -4,19 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');    // Campo de input da busca
     const moviesSection = document.querySelector('.movie-grid');    // Seção onde os filmes serão exibidos
     const genreFilter = document.getElementById('genre-filter');    // Filtro de gênero
+    const noResultsMessage = document.getElementById('no-results-message'); // Mensagem de sem resultados
 
     let filteredFilms = filmes; // Inicializa a variável com a lista de filmes
-
-    // Exibe os filmes iniciais e preenche o filtro de gêneros
-    displayMovies(filteredFilms);
-    populateGenreFilter(filmes);
 
     // Cria um card para exibir as informações de um filme
     function createMovieCard(film) {
         const movieCard = document.createElement('div');
         movieCard.className = 'movie-card';
         movieCard.innerHTML = `
-            <img src="${film.capa}" alt="${film.nome}">
+            <img src="${film.capa}" alt="${film.nome}" title="É apenas um poster, não vai a lugar algum! 😶">
             <div class="info">
                 <h3>${film.nome}</h3>
                 <p>${film.ano} - ${film.avaliacao} / 10</p>
@@ -25,16 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return movieCard;
     }
 
-    // Exibe os filmes na seção de grid
+    // Exibe os filmes na seção de grid e gerencia a mensagem de sem resultados
     function displayMovies(films) {
         moviesSection.innerHTML = ''; // Limpa a seção de filmes
-        films.forEach(film => {
-            const movieCard = createMovieCard(film); // Cria um card para cada filme
-            moviesSection.appendChild(movieCard);   // Adiciona o card à seção de filmes
-        });
+        if (films.length > 0) {
+            films.forEach(film => {
+                const movieCard = createMovieCard(film);
+                moviesSection.appendChild(movieCard);
+            });
+            noResultsMessage.style.display = 'none'; // Esconde a mensagem de sem resultados
+        } else {
+            noResultsMessage.style.display = 'block'; // Mostra a mensagem de sem resultados
+            noResultsMessage.textContent = 'Nenhum resultado encontrado'; // Define o texto da mensagem
+        }
     }
 
-    // Filtra e exibe filmes de acordo com a busca
+    // Filtra filmes com base na busca do usuário
     function searchMovies(query) {
         const lowerQuery = query.toLowerCase(); // Converte a busca para letras minúsculas
         filteredFilms = filmes.filter(film =>
@@ -90,4 +93,27 @@ document.addEventListener('DOMContentLoaded', () => {
         allOption.textContent = 'Todos';
         genreFilter.insertBefore(allOption, genreFilter.firstChild); // Coloca a opção "Todos" como a primeira
     }
+
+    // Script para inserir o ano atual no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Adiciona eventos de clique para botões com data-message
+    const alertButtons = document.querySelectorAll('[data-message]'); // Seleciona botões com data-message
+    const authButtons = document.querySelectorAll('.auth-buttons button'); // Seleciona botões de autenticação
+    const allButtons = [...alertButtons, ...authButtons, document.getElementById('search-button'), document.getElementById('newsletterButton')];
+
+    allButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const message = this.getAttribute('data-message');
+            if (message) { // Verifica se a mensagem existe
+                alert(message); // Exibe a mensagem de alerta
+            }
+        });
+    });
+
+    // Inicializa o filtro de gêneros
+    populateGenreFilter(filmes);
+
+    // Exibe todos os filmes ao carregar a página
+    displayMovies(filmes); 
 });
