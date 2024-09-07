@@ -42,6 +42,9 @@ Bem-vindo ao CinemaFlix, um projeto desenvolvido durante a Imersão DEV da Alura
 ├── style.css
 │   └── # Arquivo de estilos para a página inicial da plataforma.
 │
+├── script.js
+│   └── # Script para funcionalidades dinâmicas da página inicial.
+|
 ├── dados.js
 │   └── # Dados dos filmes armazenados em um array JavaScript.
 ```
